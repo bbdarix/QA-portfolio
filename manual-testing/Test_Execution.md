@@ -5,77 +5,78 @@
 **Testing Type:** Manual Functional Testing  
 **Environment:** Google Chrome / Windows  
 **Execution Period:** October 2026  
-**Status:** In Progress
+**Status:** Completed
 
 ## 1. Test Execution Summary
 
 | Metric | Result |
 |---|---|
-| Total Executed | 34 |
-| Passed | 34 |
+| Total Test Cases | 40 |
+| Passed | 40 |
 | Failed | 0 |
 | Blocked | 0 |
+| Not Run | 0 |
+| Execution Coverage | 100% |
 | Pass Rate | 100% |
 
-## 2. Module Results
+## 2. Results by Module
 
-| Module | Total | Passed | Failed | Status |
+| Module | Total | Passed | Failed | Blocked |
 |---|---|---|---|---|
-| Login | 7 | 7 | 0 | Completed |
-| Product Listing | 8 | 8 | 0 | Completed |
-| Shopping Cart | 8 | 8 | 0 | Completed |
-| Checkout | 11 | 11 | 0 | Completed |
-| Navigation | 6 | 0 | 0 | Not Started |
+| Login | 7 | 7 | 0 | 0 |
+| Product Listing | 8 | 8 | 0 | 0 |
+| Shopping Cart | 8 | 8 | 0 | 0 |
+| Checkout | 11 | 11 | 0 | 0 |
+| Navigation and Logout | 6 | 6 | 0 | 0 |
+| **TOTAL** | **40** | **40** | **0** | **0** |
 
-## 3. Checkout Execution Details
+## 3. Navigation and Logout Results
 
-| Test ID | Scenario | Status |
+| Test Case | Scenario | Status |
 |---|---|---|
-| TC-024 | Valid checkout information | PASS |
-| TC-025 | Empty first name | PASS |
-| TC-026 | Empty last name | PASS |
-| TC-027 | Empty postal code | PASS |
-| TC-028 | All fields empty | PASS |
-| TC-029 | Order summary products | PASS |
-| TC-030 | Item total calculation | PASS |
-| TC-031 | Tax and total calculation | PASS |
-| TC-032 | Complete order | PASS |
-| TC-033 | Order confirmation | PASS |
-| TC-034 | Return to products | PASS |
+| TC-035 | Open navigation menu | PASS |
+| TC-036 | Close navigation menu | PASS |
+| TC-037 | All Items navigation | PASS |
+| TC-038 | About navigation | PASS |
+| TC-039 | Logout | PASS |
+| TC-040 | Access protected page after logout | PASS |
 
 ## 4. Observations
 
-### OBS-001 — Checkout validation behavior
+### OBS-001 — Checkout Form Validation
 
 **Related Test Case:** TC-028
 
-When all customer information fields are empty,
-the application displays an error indicating
-that the First Name field is required.
+When all checkout fields are empty, the
+application displays a validation error
+for the First Name field.
 
 The checkout process does not proceed.
 
-**Assessment:** Expected behavior according to
-the documented test case.
+**Assessment:** Expected behavior.
 
-**Final Status:** PASS
+**Status:** PASS
 
 ## 5. Defect Summary
 
 No confirmed functional defects were identified
-during the 34 executed test cases.
+during the 40 executed test cases.
 
 ## 6. Overall Assessment
 
-Four functional modules have been tested.
+All planned test cases were executed.
 
-All executed test cases passed.
+All 40 test cases passed successfully.
 
-Navigation and Logout testing remains outstanding.
+The tested functionality behaved as expected
+within the defined testing scope.
 
-## 7. Next Steps
+## 7. Conclusion
 
-1. Create Navigation and Logout test cases.
-2. Execute the remaining six tests.
-3. Document execution results.
-4. Prepare the final Test Summary Report.
+Manual functional testing of the selected
+SauceDemo modules has been completed.
+
+No confirmed functional defects were found.
+
+Further testing could include cross-browser
+compatibility, accessibility, and API testing.
