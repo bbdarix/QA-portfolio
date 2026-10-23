@@ -1,157 +1,90 @@
 
-# Shopping Cart Test Cases — SauceDemo
+# Test Execution Report — SauceDemo
 
-**Module:** Shopping Cart
-**Application:** https://www.saucedemo.com/
-**Testing Type:** Manual Functional Testing
-**Execution Status:** Not Run
+**Project:** SauceDemo (Swag Labs)  
+**Testing Type:** Manual Functional Testing  
+**Environment:** Google Chrome / Windows  
+**Execution Period:** October 2026  
+**Status:** In Progress
 
-## Common Preconditions
+## 1. Test Execution Summary
 
-- User is logged in as standard_user.
-- Shopping cart is empty.
-- Products page is displayed.
+| Metric | Result |
+|---|---|
+| Total Test Cases Executed | 23 |
+| Passed | 23 |
+| Failed | 0 |
+| Blocked | 0 |
+| Pass Rate (Executed Tests) | 100% |
 
----
+## 2. Login Module
 
-## TC-016 — Add one product to cart
+| Test Case ID | Test Scenario | Status |
+|---|---|---|
+| TC-001 | Login with valid credentials | PASS |
+| TC-002 | Login with invalid username | PASS |
+| TC-003 | Login with invalid password | PASS |
+| TC-004 | Login with empty username | PASS |
+| TC-005 | Login with empty password | PASS |
+| TC-006 | Login with both fields empty | PASS |
+| TC-007 | Login with locked-out user | PASS |
 
-**Priority:** High
-**Checklist:** CH-016
+**Result:** 7/7 PASS
 
-### Steps
-1. Open the Products page.
-2. Click "Add to cart" for Sauce Labs Backpack.
-3. Open the shopping cart.
+## 3. Product Listing Module
 
-### Expected Result
-- The product is added to the cart.
-- The correct product name and price are displayed.
-- Cart badge displays 1.
+| Test Case ID | Test Scenario | Status |
+|---|---|---|
+| TC-008 | Verify product listing | PASS |
+| TC-009 | Verify product information | PASS |
+| TC-010 | Sort products A to Z | PASS |
+| TC-011 | Sort products Z to A | PASS |
+| TC-012 | Sort by price: Low to High | PASS |
+| TC-013 | Sort by price: High to Low | PASS |
+| TC-014 | Open product details | PASS |
+| TC-015 | Return to product listing | PASS |
 
----
+**Result:** 8/8 PASS
 
-## TC-017 — Add multiple products to cart
+## 4. Shopping Cart Module
 
-**Priority:** High
-**Checklist:** CH-017
+| Test Case ID | Test Scenario | Status |
+|---|---|---|
+| TC-016 | Add one product to cart | PASS |
+| TC-017 | Add multiple products to cart | PASS |
+| TC-018 | Verify cart badge count | PASS |
+| TC-019 | Remove product from cart | PASS |
+| TC-020 | Remove all products | PASS |
+| TC-021 | Verify product details in cart | PASS |
+| TC-022 | Verify cart persistence | PASS |
+| TC-023 | Open checkout | PASS |
 
-### Steps
-1. Open the Products page.
-2. Add Sauce Labs Backpack to cart.
-3. Add Sauce Labs Bike Light to cart.
-4. Open the shopping cart.
+**Result:** 8/8 PASS
 
-### Expected Result
-- Both products are displayed in the cart.
-- Product names and prices are correct.
-- Cart badge displays 2.
+## 5. Defect Summary
 
----
+No functional defects were identified in the
+23 executed test cases.
 
-## TC-018 — Verify cart badge count
+## 6. Overall Assessment
 
-**Priority:** High
-**Checklist:** CH-018
+| Module | Status |
+|---|---|
+| Login | Completed |
+| Product Listing | Completed |
+| Shopping Cart | Completed |
+| Checkout | Not Started |
+| Navigation and Logout | Not Started |
 
-### Steps
-1. Add one product to cart.
-2. Observe the cart badge.
-3. Add another product.
-4. Observe the cart badge again.
+All 23 executed test cases passed.
 
-### Expected Result
-- Badge displays 1 after adding the first product.
-- Badge displays 2 after adding the second product.
+Testing is ongoing. The application has not
+yet been fully evaluated against the test plan.
 
----
+## 7. Next Steps
 
-## TC-019 — Remove product from cart
-
-**Priority:** High
-**Checklist:** CH-019
-
-### Steps
-1. Add two products to cart.
-2. Open the shopping cart.
-3. Click "Remove" for one product.
-
-### Expected Result
-- The selected product is removed.
-- The other product remains in the cart.
-- Cart badge displays 1.
-
----
-
-## TC-020 — Verify badge after removing all products
-
-**Priority:** Medium
-**Checklist:** CH-020
-
-### Steps
-1. Add one product to cart.
-2. Open the shopping cart.
-3. Click "Remove".
-4. Observe the cart badge.
-
-### Expected Result
-- The product is removed.
-- The cart is empty.
-- The cart badge is no longer displayed.
-
----
-
-## TC-021 — Verify product details in cart
-
-**Priority:** High
-**Checklist:** CH-021
-
-### Steps
-1. Add Sauce Labs Backpack to cart.
-2. Open the shopping cart.
-3. Inspect the product information.
-
-### Expected Result
-- Correct product name is displayed.
-- Correct product description is displayed.
-- Correct product price is displayed.
-- Quantity is 1.
-
----
-
-## TC-022 — Verify cart persistence during navigation
-
-**Priority:** High
-**Checklist:** CH-022
-
-### Steps
-1. Add two products to cart.
-2. Open the shopping cart.
-3. Click "Continue Shopping".
-4. Open a product details page.
-5. Return to the Products page.
-6. Open the shopping cart again.
-
-### Expected Result
-- Both products remain in the cart.
-- Product details are unchanged.
-- Cart badge displays 2.
-
----
-
-## TC-023 — Open checkout from shopping cart
-
-**Priority:** High
-**Checklist:** CH-023
-
-### Steps
-1. Add one product to cart.
-2. Open the shopping cart.
-3. Click "Checkout".
-
-### Expected Result
-- Checkout information page opens.
-- First Name field is displayed.
-- Last Name field is displayed.
-- Postal Code field is displayed.
-- Continue button is available.
+1. Create and execute Checkout test cases.
+2. Verify form validation and order calculations.
+3. Test order completion.
+4. Continue with Navigation and Logout testing.
+5. Prepare the final Test Summary Report.
