@@ -1,60 +1,81 @@
 
 # Test Execution Report — SauceDemo
 
-**Project:** SauceDemo (Swag Labs)
-**Module:** Login / Authentication
-**Testing Type:** Manual Functional Testing
-**Environment:** Google Chrome / Windows
-**Execution Date:** 2026-10-23
-**Tested By:** QA Portfolio Author
+**Project:** SauceDemo (Swag Labs)  
+**Testing Type:** Manual Functional Testing  
+**Environment:** Google Chrome / Windows  
+**Execution Period:** October 2026  
+**Status:** In Progress
 
 ## 1. Test Execution Summary
 
 | Metric | Result |
 |---|---|
-| Total Test Cases | 7 |
-| Passed | 6 |
+| Total Executed | 34 |
+| Passed | 34 |
 | Failed | 0 |
 | Blocked | 0 |
-| Not Run | 1 |
-| Execution Progress | 85.7% |
-| Pass Rate (Executed Tests) | 100% |
+| Pass Rate | 100% |
 
-## 2. Test Execution Results
+## 2. Module Results
 
-| Test Case ID | Test Scenario | Status | Actual Result |
-|---|---|---|---|
-| TC-001 | Login with valid credentials | PASS | User successfully logged in |
-| TC-002 | Login with invalid username | PASS | Login rejected and error displayed |
-| TC-003 | Login with invalid password | PASS | Login rejected and error displayed |
-| TC-004 | Login with empty username | PASS | Username validation error displayed |
-| TC-005 | Login with empty password | PASS | Password validation error displayed |
-| TC-006 | Login with both fields empty | PASS | Login rejected and validation error displayed |
-| TC-007 | Login with locked-out user | NOT RUN | Not executed |
+| Module | Total | Passed | Failed | Status |
+|---|---|---|---|---|
+| Login | 7 | 7 | 0 | Completed |
+| Product Listing | 8 | 8 | 0 | Completed |
+| Shopping Cart | 8 | 8 | 0 | Completed |
+| Checkout | 11 | 11 | 0 | Completed |
+| Navigation | 6 | 0 | 0 | Not Started |
 
-## 3. Defect Summary
+## 3. Checkout Execution Details
 
-No defects were identified during the executed login tests.
+| Test ID | Scenario | Status |
+|---|---|---|
+| TC-024 | Valid checkout information | PASS |
+| TC-025 | Empty first name | PASS |
+| TC-026 | Empty last name | PASS |
+| TC-027 | Empty postal code | PASS |
+| TC-028 | All fields empty | PASS |
+| TC-029 | Order summary products | PASS |
+| TC-030 | Item total calculation | PASS |
+| TC-031 | Tax and total calculation | PASS |
+| TC-032 | Complete order | PASS |
+| TC-033 | Order confirmation | PASS |
+| TC-034 | Return to products | PASS |
 
 ## 4. Observations
 
-- Valid credentials allowed successful authentication.
-- Invalid credentials were rejected.
-- Required-field validation worked as expected.
-- The locked-out user scenario remains untested.
+### OBS-001 — Checkout validation behavior
 
-## 5. Conclusion
+**Related Test Case:** TC-028
 
-Six out of seven planned login test cases were
-executed successfully.
+When all customer information fields are empty,
+the application displays an error indicating
+that the First Name field is required.
 
-No failures were observed in the executed tests.
+The checkout process does not proceed.
 
-Login module testing is not yet complete because
-TC-007 remains unexecuted.
+**Assessment:** Expected behavior according to
+the documented test case.
 
-## 6. Next Steps
+**Final Status:** PASS
 
-- Execute TC-007 (locked-out user).
-- Update the execution results.
-- Continue testing the Product Listing module.
+## 5. Defect Summary
+
+No confirmed functional defects were identified
+during the 34 executed test cases.
+
+## 6. Overall Assessment
+
+Four functional modules have been tested.
+
+All executed test cases passed.
+
+Navigation and Logout testing remains outstanding.
+
+## 7. Next Steps
+
+1. Create Navigation and Logout test cases.
+2. Execute the remaining six tests.
+3. Document execution results.
+4. Prepare the final Test Summary Report.
