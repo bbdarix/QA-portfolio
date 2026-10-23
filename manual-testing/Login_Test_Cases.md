@@ -1,162 +1,62 @@
 
-# Login Test Cases — SauceDemo
+# Test Execution Report — SauceDemo
 
-**Module:** Authentication  
-**Application:** https://www.saucedemo.com/  
-**Test Type:** Functional Testing  
-**Execution Status:** Not Run
+**Project:** SauceDemo (Swag Labs)  
+**Module:** Login / Authentication  
+**Testing Type:** Manual Functional Testing  
+**Environment:** Google Chrome / Windows  
+**Execution Date:** 2026-10-23  
+**Tested By:** QA Portfolio Author
 
----
+## 1. Test Execution Summary
 
-## TC-001 — Login with valid credentials
+| Metric | Result |
+|---|---|
+| Total Test Cases | 7 |
+| Passed | 7 |
+| Failed | 0 |
+| Blocked | 0 |
+| Not Run | 0 |
+| Execution Progress | 100% |
+| Pass Rate | 100% |
 
-**Priority:** High  
-**Related Checklist Item:** CH-001
+## 2. Test Execution Results
 
-### Preconditions
-- User is on the SauceDemo login page.
-- Valid test credentials are available.
+| Test Case ID | Test Scenario | Status | Actual Result |
+|---|---|---|---|
+| TC-001 | Login with valid credentials | PASS | User successfully logged in |
+| TC-002 | Login with invalid username | PASS | Login rejected and error displayed |
+| TC-003 | Login with invalid password | PASS | Login rejected and error displayed |
+| TC-004 | Login with empty username | PASS | Username validation error displayed |
+| TC-005 | Login with empty password | PASS | Password validation error displayed |
+| TC-006 | Login with both fields empty | PASS | Login rejected and validation error displayed |
+| TC-007 | Login with locked-out user | PASS | Login rejected and error message displayed |
 
-### Test Data
-- Username: standard_user
-- Password: secret_sauce
+## 3. Defect Summary
 
-### Test Steps
-1. Open https://www.saucedemo.com/
-2. Enter `standard_user` in the Username field.
-3. Enter `secret_sauce` in the Password field.
-4. Click the Login button.
+No defects were identified during the executed login tests.
 
-### Expected Result
-- User is successfully authenticated.
-- The Products page is displayed.
-- The URL contains `/inventory.html`.
+## 4. Observations
 
----
+- Valid credentials allowed successful authentication.
+- Invalid credentials were rejected.
+- Required-field validation worked as expected.
+- The locked-out user was unable to log in.
+- An error message was displayed for the locked-out user.
 
-## TC-002 — Login with invalid username
+## 5. Conclusion
 
-**Priority:** High  
-**Related Checklist Item:** CH-002
+All seven planned login test cases were executed.
 
-### Preconditions
-- User is on the login page.
+All tests passed.
 
-### Test Data
-- Username: invalid_user
-- Password: secret_sauce
+No functional defects were identified in the tested scenarios.
 
-### Test Steps
-1. Open the login page.
-2. Enter `invalid_user` in the Username field.
-3. Enter `secret_sauce` in the Password field.
-4. Click Login.
+The Login module testing is complete within the defined scope.
 
-### Expected Result
-- Login is rejected.
-- An error message is displayed.
-- User remains on the login page.
+## 6. Next Steps
 
----
-
-## TC-003 — Login with invalid password
-
-**Priority:** High  
-**Related Checklist Item:** CH-003
-
-### Test Data
-- Username: standard_user
-- Password: wrong_password
-
-### Test Steps
-1. Open the login page.
-2. Enter `standard_user`.
-3. Enter `wrong_password`.
-4. Click Login.
-
-### Expected Result
-- Login is rejected.
-- An error message is displayed.
-- User remains on the login page.
-
----
-
-## TC-004 — Login with empty username
-
-**Priority:** Medium  
-**Related Checklist Item:** CH-004
-
-### Test Data
-- Username: empty
-- Password: secret_sauce
-
-### Test Steps
-1. Open the login page.
-2. Leave Username empty.
-3. Enter `secret_sauce` in Password.
-4. Click Login.
-
-### Expected Result
-- Login is rejected.
-- An error indicating that the username is required is displayed.
-
----
-
-## TC-005 — Login with empty password
-
-**Priority:** Medium  
-**Related Checklist Item:** CH-005
-
-### Test Data
-- Username: standard_user
-- Password: empty
-
-### Test Steps
-1. Open the login page.
-2. Enter `standard_user`.
-3. Leave Password empty.
-4. Click Login.
-
-### Expected Result
-- Login is rejected.
-- An error indicating that the password is required is displayed.
-
----
-
-## TC-006 — Login with both fields empty
-
-**Priority:** Medium  
-**Related Checklist Item:** CH-006
-
-### Test Steps
-1. Open the login page.
-2. Leave Username empty.
-3. Leave Password empty.
-4. Click Login.
-
-### Expected Result
-- Login is rejected.
-- A validation error is displayed.
-- User remains on the login page.
-
----
-
-## TC-007 — Login with locked-out user
-
-**Priority:** High  
-**Related Checklist Item:** CH-007
-
-### Test Data
-- Username: locked_out_user
-- Password: secret_sauce
-
-### Test Steps
-1. Open the login page.
-2. Enter `locked_out_user`.
-3. Enter `secret_sauce`.
-4. Click Login.
-
-### Expected Result
-- Login is rejected.
-- A message indicates that the user is locked out.
-- User remains on the login page.
+- Execute Product Listing tests.
+- Verify product sorting functionality.
+- Verify product details and navigation.
+- Document test execution results.
